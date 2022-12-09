@@ -67,4 +67,5 @@ function game() {
         console.log(`You tie with a score of ${playerScore}.`);
     }
 }
+
 game()

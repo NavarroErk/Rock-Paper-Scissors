@@ -10,34 +10,30 @@ getComputerChoice()
 let playerSelection 
 // playerSelection = playerSelection.toLowerCase()
 
-let rock = document.querySelector("#rockSelection");
-let rockSelected = rock.addEventListener("click", () => {
-    console.log("rock clicked");
-    // playerSelection = "rock"
-    playRound("rock", getComputerChoice())
+let rock = document.getElementById("rockSelection");
+    rock.addEventListener("click", () => {
+    playerSelection = "rock"
+    playRound(playerSelection, getComputerChoice)
     })
 
-function rockClicked() {
-    rock = "rock"
-    playRound()
-}
-
-    let paper = document.querySelector("#paperSelection");
+let paper = document.getElementById("paperSelection");
     paper.addEventListener("click", () => {
-        playerSelection = "paper"
+    playerSelection = "paper"
+    playRound(playerSelection, getComputerChoice)
     })
-    let scissors = document.querySelector("#scissorsSelection");
+
+let scissors = document.querySelector("#scissorsSelection");
     scissors.addEventListener("click", () => {
     playerSelection = "scissors"
+    playRound(playerSelection, getComputerChoice)
 })
 
 function playRound(playerSelection, computerSelection) {
     // playerSelection = prompt("Please choose rock, paper, or scissors.").toLowerCase();
-    playerSelection = "rock"
     computerSelection = getComputerChoice()
     let result = null
     if (playerSelection == computerSelection) {
-        result = "It's a tie"
+        result = `It's a tie. You both selected ${playerSelection}`
         console.log(result);
         return result
     } else if (playerSelection == "rock" && computerSelection == "paper") {

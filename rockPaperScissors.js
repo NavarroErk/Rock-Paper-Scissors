@@ -28,33 +28,38 @@ let scissors = document.querySelector("#scissorsSelection");
 function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice()
     let result
+    let outputDiv = document.getElementById("outputDiv")
+    let para = document.createElement("p")
+    para.setAttribute("id", "output")
+    outputDiv.appendChild(para)
+    let paraOutput = document.getElementById("output")
     if (playerSelection == computerSelection) {
         result = `It's a tie. You both selected ${playerSelection}`
-        console.log(result);
+        paraOutput.textContent = result
         return result
     } else if (playerSelection == "rock" && computerSelection == "paper") {
-        result = "You lose"
-        console.log(`${result}. ${computerSelection} beats ${playerSelection}`);
+        result = `You lose. ${computerSelection} beats ${playerSelection}`
+        paraOutput.textContent = result
         return result
     } else if (playerSelection == "scissors" && computerSelection == "paper") {
-        result = "You win"
-        console.log(`${result}. ${playerSelection} beats ${computerSelection}`);
+        result = `You win. ${playerSelection} beats ${computerSelection}`
+        paraOutput.textContent = result
         return result
     }else if (playerSelection == "scissors" && computerSelection == "rock") {
-        result = "You lose"
-        console.log(`${result}. ${computerSelection} beats ${playerSelection}`);
+        result = `You lose. ${computerSelection} beats ${playerSelection}`
+        paraOutput.textContent = result
         return result
     }else if (playerSelection == "paper" && computerSelection == "rock") {
-        result = "You win"
-        console.log(`${result}. ${playerSelection} beats ${computerSelection}`);
+        result = `You win. ${playerSelection} beats ${computerSelection}`
+        paraOutput.textContent = result
         return result
     }else if (playerSelection == "rock" && computerSelection == "scissors") {
-        result = "You win"
-        console.log(`${result}. ${playerSelection} beats ${computerSelection}`);
+        result = `You win. ${playerSelection} beats ${computerSelection}`
+        paraOutput.textContent = result
         return result
     }else if (playerSelection == "paper" && computerSelection == "scissors") {
-        result = "You lose"
-        console.log(`${result}. ${computerSelection} beats ${playerSelection} `);
+        result = `You lose. ${computerSelection} beats ${playerSelection}`
+        paraOutput.textContent = result
         return result
     }
 }

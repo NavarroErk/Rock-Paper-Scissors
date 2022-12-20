@@ -12,26 +12,22 @@ let playerSelection
 
 let rock = document.getElementById("rockSelection");
     rock.addEventListener("click", () => {
-    playerSelection = "rock"
-    playRound(playerSelection, getComputerChoice)
+    playRound("rock", getComputerChoice)
     })
 
 let paper = document.getElementById("paperSelection");
     paper.addEventListener("click", () => {
-    playerSelection = "paper"
-    playRound(playerSelection, getComputerChoice)
+    playRound("paper", getComputerChoice)
     })
 
 let scissors = document.querySelector("#scissorsSelection");
     scissors.addEventListener("click", () => {
-    playerSelection = "scissors"
-    playRound(playerSelection, getComputerChoice)
+    playRound("scissors", getComputerChoice)
 })
 
 function playRound(playerSelection, computerSelection) {
-    // playerSelection = prompt("Please choose rock, paper, or scissors.").toLowerCase();
     computerSelection = getComputerChoice()
-    let result = null
+    let result
     if (playerSelection == computerSelection) {
         result = `It's a tie. You both selected ${playerSelection}`
         console.log(result);

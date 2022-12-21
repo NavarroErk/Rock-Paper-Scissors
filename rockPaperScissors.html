@@ -9,6 +9,7 @@
   </head>
   <body>
     <p id="title">Rock, Paper, Scissors</p>
+    <p id="firstTo5">First to 5 Wins</p>
     <p id="direction">Choose your selection:</p>
     <div class="selectionContainer">
       <div class="selectionRow">
@@ -32,7 +33,14 @@
         </div>
       </div>
     </div>
-    <div id="outputDiv"></div>
+    <div>
+      <p id="output"></p>
+    </div>
+    <div class="scoresDiv">
+      <p id="playerScorePara">Player Score: 0</p>
+      <p id="computerScorePara">Computer Score: 0</p>
+    </div>
+    <button id="playAgainBtn" style="display: none">Play Again</button>
     <script src="rockPaperScissors.js"></script>
   </body>
 </html>

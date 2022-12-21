@@ -1,0 +1,7 @@
+
+1. startGame() // maybe not necessary?
+2. click on option, invoke singleRound() and pass clicked option and computerChoice() to the function
+3. create function that will verify playerScore and computerScore 
+a. if (playerScore == 5 || computerScore == 5 ){
+     // declare winner
+}

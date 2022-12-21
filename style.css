@@ -10,7 +10,7 @@ body{
     margin-top: 100px;
 }
 
-#direction{
+#direction, #firstTo5{
     font-size: 22pt;
     width: fit-content;
     margin: 0 auto;
@@ -107,4 +107,36 @@ label{
     margin-top: 50px;
     width: fit-content;
     font-size: 24pt;
+}
+
+.scoresDiv{
+    display: flex;
+    justify-content: center;
+}
+
+#playerScorePara, #computerScorePara{
+    font-size: 24pt;
+    margin: 40px;
+}
+
+#playAgainBtn{
+    /* display: none; */
+    display:block;
+    margin: 0 auto;
+    width: fit-content;
+    height:100px;
+    font-size: 28pt;
+    background-color: black;
+    color: white;
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 0 0 rgba(105, 105, 105, 0);
+    transition: box-shadow 0.5s ease-out
+}
+
+#playAgainBtn:active{
+    box-shadow: 0 0 0 5px rgba(154, 154, 154, 0.98);
+    transition: ease-in;
+}
+#playAgainBtn:hover{
+    cursor: pointer;
 }
